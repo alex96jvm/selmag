@@ -1,13 +1,13 @@
-package dev.alex96jvm.selmag;
+package dev.alex96jvm.selmag.manager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SelmagApplication {
+public class 	ManagerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SelmagApplication.class, args);
+		SpringApplication.run(ManagerApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package dev.alex96jvm.selmag;
+package dev.alex96jvm.selmag.manager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SelmagApplicationTests {
+class ManagerApplicationTests {
 
 	@Test
 	void contextLoads() {
