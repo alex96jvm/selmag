@@ -29,4 +29,9 @@ public class InMemoryProductRepository implements ProductRepository{
         return this.products.stream().filter(product -> Objects.equals(productId, product.getId()))
                 .findFirst();
     }
+
+    @Override
+    public void deleteById(Integer id) {
+        this.products.removeIf(product -> Objects.equals(id, product.getId()));
+    }
 }
