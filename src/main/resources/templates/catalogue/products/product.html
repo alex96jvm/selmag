@@ -12,5 +12,6 @@
     <li><strong>Название</strong>: <span data-th-text="${product.title}"></span></li>
     <li><strong>Описание</strong>: <span data-th-text="${product.details}"></span></li>
 </ul>
+<a data-th-href="@{/catalogue/products/{productId}/edit(productId=${product.id})}">Изменить</a>
 </body>
 </html>
