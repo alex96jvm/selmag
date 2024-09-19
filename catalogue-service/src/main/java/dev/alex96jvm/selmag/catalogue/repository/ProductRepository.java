@@ -1,6 +1,6 @@
-package dev.alex96jvm.selmag.manager.repository;
+package dev.alex96jvm.selmag.catalogue.repository;
 
-import dev.alex96jvm.selmag.manager.entity.Product;
+import dev.alex96jvm.selmag.catalogue.entity.Product;
 
 import java.util.List;
 import java.util.Optional;

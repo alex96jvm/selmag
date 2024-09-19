@@ -1,7 +1,7 @@
-package dev.alex96jvm.selmag.manager.service;
+package dev.alex96jvm.selmag.catalogue.service;
 
-import dev.alex96jvm.selmag.manager.entity.Product;
-import dev.alex96jvm.selmag.manager.repository.ProductRepository;
+import dev.alex96jvm.selmag.catalogue.entity.Product;
+import dev.alex96jvm.selmag.catalogue.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class DefaultProductService implements ProductService{
+public class DefaultProductService implements ProductService {
     private final ProductRepository productRepository;
 
     @Override

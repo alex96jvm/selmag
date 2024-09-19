@@ -1,12 +1,12 @@
-package dev.alex96jvm.selmag.manager.repository;
+package dev.alex96jvm.selmag.catalogue.repository;
 
-import dev.alex96jvm.selmag.manager.entity.Product;
+import dev.alex96jvm.selmag.catalogue.entity.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
 @Repository
-public class InMemoryProductRepository implements ProductRepository{
+public class InMemoryProductRepository implements ProductRepository {
     List<Product> products = Collections.synchronizedList(new LinkedList<>());
 
     @Override
