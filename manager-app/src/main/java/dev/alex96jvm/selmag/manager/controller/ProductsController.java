@@ -1,7 +1,7 @@
 package dev.alex96jvm.selmag.manager.controller;
 
+import dev.alex96jvm.selmag.manager.client.ProductsRestClient;
 import dev.alex96jvm.selmag.manager.controller.payload.NewProductPayload;
-import dev.alex96jvm.selmag.manager.service.ProductService;
 import dev.alex96jvm.selmag.manager.entity.Product;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("catalogue/products")
 public class ProductsController {
 
-    private final ProductService productService;
+    private final ProductsRestClient productsRestClient;
 
     @RequestMapping(value = "list", method = RequestMethod.GET)
     public String getProductList(Model model){
-        model.addAttribute("products", this.productService.findAllProducts());
+        model.addAttribute("products", this.productsRestClient.findAllProducts());
         return "catalogue/products/list";
     }
 
@@ -38,8 +38,8 @@ public class ProductsController {
                     .map(ObjectError::getDefaultMessage).toList());
             return "catalogue/products/new_product";
         } else {
-            Product product = this.productService.createProduct(payload.title(), payload.details());
-            return "redirect:/catalogue/products/%d".formatted(product.getId());
+            Product product = this.productsRestClient.createProduct(payload.title(), payload.details());
+            return "redirect:/catalogue/products/%d".formatted(product.id());
         }
     }
 
